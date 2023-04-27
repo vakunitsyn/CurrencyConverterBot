@@ -18,15 +18,15 @@ def repeat(message: telebot.types.Message):
 
 @bot.message_handler(commands=['help', ])
 def help_(message: telebot.types.Message):
-    text = 'Чтобы начать работу введите команду боту в следующем формате: ' \
-           '\n<имя валюты>  <в какую валюту перевести>  <количество переводимой валюты>. ' \
+    text = 'Для начала работы введите команду боту в следующем формате: ' \
+           '\n<имя валюты>  <в какую валюту перевести>  <количество переводимой валюты>, строчными буквами через одинарный пробел. ' \
            '\nУвидеть список всех доступных валют:  /values'
     bot.reply_to(message, text)
 
 
 @bot.message_handler(commands=['stop', ])
 def stop(message: telebot.types.Message):
-    text = f'До новых встреч, {message.chat.username}!'
+    text = f'Всего доброго!'
     bot.reply_to(message, text)
 
 
